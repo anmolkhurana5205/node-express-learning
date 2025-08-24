@@ -1,5 +1,7 @@
 const http = require('http');
 
+// after learning streams we now know that 'res' which is http response object (not specific name we can give any name to it i am using this name here because it is general) is a writable stream, and 'req' is a readable stream.
+
 const server = http.createServer((req, res) => {
   if(req.url === '/') {
     res.end('welcome to our home page');
